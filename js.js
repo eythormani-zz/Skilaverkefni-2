@@ -15,9 +15,9 @@ function renderData(datas) {
 		console.log(data[i]);
 		var event = data[i];
 		var date = changeDate(event.dateOfShow);
-		var table = $("#mainTable");
-		var tableRow = "<tr data-toggle=\"tooltip\" title=\"<img src='" + event.imageSource + "' />\" class=\"contentRow\"><td>" + (i + 1) + "</td><td>" + event.eventDateName + "</td><td>" + event.eventHallName + "</td><td>" + date + "</td><td class=\"image\"><img src=\"" + event.imageSource + "\"></td></tr>";
-		table.append(tableRow);
+		var insert = $("#mainThing");
+		var eventTile = "<div class=\"col-md-4 eventContainer\"><img src='" + event.imageSource + "'><div>Nafn: " + event.eventDateName + "</div><div>Staðsetning: " + event.eventHallName + "</div><div>Tími: " + date + "</div></div>";
+		insert.append(eventTile);
 	}
 }
 
